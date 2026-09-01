@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://georgekarapanagos095-ui.github.io/Gks-transfer/sitemap.xml
+Sitemap: https://gkstransfer.gr/sitemap.xml
