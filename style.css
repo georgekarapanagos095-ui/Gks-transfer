@@ -368,3 +368,27 @@ footer{
   form button,textarea{grid-column:auto}
   .car-caption{left:14px;right:14px;bottom:14px}
 }
+
+.whatsapp-submit{
+  background:#20b858 !important;
+  color:#fff !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.16);
+}
+.whatsapp-submit:hover{
+  background:#189a49 !important;
+  transform:translateY(-1px);
+}
+.form-note{
+  grid-column:2;
+  margin-top:-42px;
+  padding-top:48px;
+  font-size:13px;
+  color:#777 !important;
+}
+@media(max-width:760px){
+  .form-note{
+    grid-column:auto;
+    margin-top:12px;
+    padding-top:0;
+  }
+}
