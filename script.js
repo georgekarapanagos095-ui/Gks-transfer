@@ -6,11 +6,12 @@ function setLang(lang){
 function sendMail(e){
  e.preventDefault();
  const v=id=>document.getElementById(id).value;
- const subject=encodeURIComponent('Transfer Request: '+v('route'));
+ const subject=encodeURIComponent('GKS Transfer Request: '+v('pickup')+' to '+v('destination'));
  const body=encodeURIComponent(
-  'Name: '+v('name')+'\nEmail: '+v('email')+'\nPhone/WhatsApp: '+v('phone')+
-  '\nRoute: '+v('route')+'\nDate & Time: '+v('datetime')+'\nPassengers: '+v('passengers')+
-  '\n\nMessage: '+v('message')
- );
+ 'Name: '+v('name')+'\nEmail: '+v('email')+'\nPhone/WhatsApp: '+v('phone')+
+ '\nPickup: '+v('pickup')+'\nDestination: '+v('destination')+
+ '\nDate & Time: '+v('datetime')+'\nPassengers: '+v('passengers')+
+ '\nLuggage: '+v('luggage')+'\nFlight/Ferry: '+v('flight')+
+ '\n\nAdditional information: '+v('message'));
  location.href='mailto:gkstransferinfo@gmail.com?subject='+subject+'&body='+body;
 }
