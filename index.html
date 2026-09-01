@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="nav">
+<header class="site-header"><div class="nav">
 <img src="logo.jpg" class="logo" alt="GKS TRANSFER">
 <nav>
 <a href="#home" data-en="Home" data-el="Αρχική">Home</a>
@@ -17,10 +17,13 @@
 <a href="#fleet" data-en="Fleet" data-el="Στόλος">Fleet</a>
 <a href="#contact" data-en="Book" data-el="Κράτηση">Book</a>
 </nav>
-<div class="lang"><button onclick="setLang('en')">🇬🇧</button><button onclick="setLang('el')">🇬🇷</button></div>
+<div class="lang" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en', this)">EN</button>
+      <button class="lang-btn" data-lang="el" onclick="setLang('el', this)">GR</button>
+    </div>
 </div></header>
 
-<section id="home" class="hero"><div class="hero-inner">
+<section id="home" class="hero"><div class="hero-glow"></div><div class="hero-inner">
 <div>
 <p class="gold">GKS TRANSFER</p>
 <h1 data-en="PRIVATE TRANSFERS IN ATHENS & ACROSS GREECE" data-el="ΙΔΙΩΤΙΚΕΣ ΜΕΤΑΦΟΡΕΣ ΣΤΗΝ ΑΘΗΝΑ & ΣΕ ΟΛΗ ΤΗΝ ΕΛΛΑΔΑ">PRIVATE TRANSFERS IN ATHENS & ACROSS GREECE</h1>
@@ -28,7 +31,15 @@
 <p data-en="Safe, comfortable and reliable private transportation for your journey in Greece." data-el="Ασφαλείς, άνετες και αξιόπιστες ιδιωτικές μεταφορές για κάθε διαδρομή σας στην Ελλάδα.">Safe, comfortable and reliable private transportation for your journey in Greece.</p>
 <a class="cta" href="#contact" data-en="BOOK YOUR TRANSFER" data-el="ΚΑΝΤΕ ΚΡΑΤΗΣΗ">BOOK YOUR TRANSFER</a>
 </div>
-<div class="vehicle-photo hero-car"><img src="skoda-octavia.png" alt="Skoda Octavia station wagon - GKS Transfer"></div>
+<div class="vehicle-photo hero-car">
+      <div class="car-frame">
+        <img src="skoda-octavia.png" alt="Skoda Octavia station wagon - GKS Transfer">
+        <div class="car-caption">
+          <span>GKS TRANSFER</span>
+          <strong>Skoda Octavia Estate</strong>
+        </div>
+      </div>
+    </div>
 </div></section>
 
 <section class="quick">

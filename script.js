@@ -1,7 +1,8 @@
-function setLang(lang){
+function setLang(lang, button){
  document.documentElement.lang=lang;
  document.querySelectorAll('[data-en][data-el]').forEach(el=>el.textContent=el.dataset[lang]);
  document.querySelectorAll('[data-en-ph][data-el-ph]').forEach(el=>el.placeholder=el.dataset[lang+'Ph']);
+ document.querySelectorAll('.lang-btn').forEach(btn=>btn.classList.toggle('active', btn.dataset.lang===lang));
 }
 function sendMail(e){
  e.preventDefault();
