@@ -392,3 +392,12 @@ footer{
     padding-top:0;
   }
 }
+
+.booking-submit{
+  background:linear-gradient(135deg,var(--gold-2),#c28b25) !important;
+  color:#090909 !important;
+}
+.booking-submit:disabled{opacity:.65;cursor:wait}
+.booking-status{grid-column:1/-1;padding:0;border-radius:8px;font-weight:700}
+.booking-status.success{padding:14px;background:#eef8f0;color:#176a2f;border:1px solid #b8dfc2}
+.booking-status.error{padding:14px;background:#fff0f0;color:#8d2222;border:1px solid #e5bcbc}

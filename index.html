@@ -85,25 +85,26 @@
 
 <section id="contact" class="contact">
 <div><h2 data-en="BOOK YOUR TRANSFER" data-el="ΚΑΝΤΕ ΤΗΝ ΚΡΑΤΗΣΗ ΣΑΣ">BOOK YOUR TRANSFER</h2>
-<p data-en="Fill in your trip details and send your request directly to us on WhatsApp." data-el="Συμπληρώστε τα στοιχεία της διαδρομής σας και στείλτε το αίτημά σας απευθείας στο WhatsApp.">Fill in your trip details and send your request directly to us on WhatsApp.</p>
+<p data-en="Fill in your trip details and send your transfer request. We will receive it directly by email." data-el="Συμπληρώστε τα στοιχεία της διαδρομής σας και στείλτε το αίτημά σας. Θα το λάβουμε απευθείας μέσω email.">Fill in your trip details and send your transfer request. We will receive it directly by email.</p>
 <p>📞 <a href="tel:+306985752229">+30 698 575 2229</a></p>
 <p>💬 <a href="https://wa.me/306985752229">WhatsApp</a> • <a href="viber://chat?number=%2B306985752229">Viber</a></p>
 <p>✉️ <a href="mailto:gkstransferinfo@gmail.com">gkstransferinfo@gmail.com</a></p>
 <p>📍 Athens, Greece</p></div>
-<form onsubmit="sendWhatsApp(event)">
-<input required id="name" data-en-ph="Full Name" data-el-ph="Ονοματεπώνυμο" placeholder="Full Name">
-<input required id="email" type="email" placeholder="Email">
-<input id="phone" data-en-ph="Phone / WhatsApp" data-el-ph="Τηλέφωνο / WhatsApp" placeholder="Phone / WhatsApp">
-<input required id="pickup" data-en-ph="Pickup Location" data-el-ph="Σημείο Παραλαβής" placeholder="Pickup Location">
-<input required id="destination" data-en-ph="Destination" data-el-ph="Προορισμός" placeholder="Destination">
-<input id="datetime" data-en-ph="Date & Time" data-el-ph="Ημερομηνία & Ώρα" placeholder="Date & Time">
-<input id="passengers" data-en-ph="Number of Passengers" data-el-ph="Αριθμός Επιβατών" placeholder="Number of Passengers">
-<input id="luggage" data-en-ph="Number of Luggage" data-el-ph="Αριθμός Αποσκευών" placeholder="Number of Luggage">
-<input id="flight" data-en-ph="Flight / Ferry Number (optional)" data-el-ph="Αριθμός Πτήσης / Πλοίου (προαιρετικό)" placeholder="Flight / Ferry Number (optional)">
-<textarea id="message" data-en-ph="Additional information" data-el-ph="Επιπλέον πληροφορίες" placeholder="Additional information"></textarea>
-<button class="whatsapp-submit" data-en="SEND REQUEST ON WHATSAPP" data-el="ΑΠΟΣΤΟΛΗ ΣΤΟ WHATSAPP">SEND REQUEST ON WHATSAPP</button>
+<form id="bookingForm" onsubmit="sendBooking(event)">
+<input required id="name" name="Name" data-en-ph="Full Name" data-el-ph="Ονοματεπώνυμο" placeholder="Full Name">
+<input required id="email" name="Email" type="email" placeholder="Email">
+<input id="phone" name="Phone_WhatsApp" data-en-ph="Phone / WhatsApp" data-el-ph="Τηλέφωνο / WhatsApp" placeholder="Phone / WhatsApp">
+<input required id="pickup" name="Pickup" data-en-ph="Pickup Location" data-el-ph="Σημείο Παραλαβής" placeholder="Pickup Location">
+<input required id="destination" name="Destination" data-en-ph="Destination" data-el-ph="Προορισμός" placeholder="Destination">
+<input id="datetime" name="Date_Time" data-en-ph="Date & Time" data-el-ph="Ημερομηνία & Ώρα" placeholder="Date & Time">
+<input id="passengers" name="Passengers" data-en-ph="Number of Passengers" data-el-ph="Αριθμός Επιβατών" placeholder="Number of Passengers">
+<input id="luggage" name="Luggage" data-en-ph="Number of Luggage" data-el-ph="Αριθμός Αποσκευών" placeholder="Number of Luggage">
+<input id="flight" name="Flight_Ferry" data-en-ph="Flight / Ferry Number (optional)" data-el-ph="Αριθμός Πτήσης / Πλοίου (προαιρετικό)" placeholder="Flight / Ferry Number (optional)">
+<textarea id="message" name="Additional_Information" data-en-ph="Additional information" data-el-ph="Επιπλέον πληροφορίες" placeholder="Additional information"></textarea>
+<button id="submitBooking" class="booking-submit" data-en="SEND BOOKING REQUEST" data-el="ΑΠΟΣΤΟΛΗ ΑΙΤΗΜΑΤΟΣ">SEND BOOKING REQUEST</button>
 </form>
-    <p class="form-note" data-en="WhatsApp will open with your booking details ready to send. No payment is made through this form." data-el="Θα ανοίξει το WhatsApp με τα στοιχεία της κράτησής σας έτοιμα για αποστολή. Δεν πραγματοποιείται πληρωμή μέσω της φόρμας.">WhatsApp will open with your booking details ready to send. No payment is made through this form.</p>
+    <div id="bookingStatus" class="booking-status" aria-live="polite"></div>
+    <p class="form-note" data-en="Your request is sent directly to GKS TRANSFER. No payment is made through this form." data-el="Το αίτημά σας αποστέλλεται απευθείας στην GKS TRANSFER. Δεν πραγματοποιείται πληρωμή μέσω της φόρμας.">Your request is sent directly to GKS TRANSFER. No payment is made through this form.</p>
     </section>
 <footer>© 2026 GKS TRANSFER. All rights reserved.</footer>
 <script src="script.js"></script></body></html>
