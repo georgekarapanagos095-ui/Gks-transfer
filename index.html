@@ -252,4 +252,53 @@
     <p class="form-note" data-en="Your request is sent directly to GKS TRANSFER. No payment is made through this form." data-el="Το αίτημά σας αποστέλλεται απευθείας στην GKS TRANSFER. Δεν πραγματοποιείται πληρωμή μέσω της φόρμας.">Your request is sent directly to GKS TRANSFER. No payment is made through this form.</p>
     </section>
 <footer>© 2026 GKS TRANSFER. All rights reserved.</footer>
+
+<style>
+.gks-whatsapp-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 18px;
+  border-radius:999px;
+  background:#111;
+  border:1px solid rgba(212,175,55,.85);
+  color:#f2cf63;
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
+  box-shadow:0 14px 34px rgba(0,0,0,.35);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.gks-whatsapp-float:hover{
+  transform:translateY(-2px);
+  border-color:#f2cf63;
+  box-shadow:0 18px 40px rgba(0,0,0,.42);
+}
+.gks-whatsapp-float .wa-icon{
+  font-size:21px;
+  line-height:1;
+}
+@media(max-width:760px){
+  .gks-whatsapp-float{
+    right:14px;
+    bottom:14px;
+    padding:13px 16px;
+    font-size:15px;
+  }
+}
+</style>
+
+<a class="gks-whatsapp-float"
+   href="https://wa.me/306985752229?text=Hello%20GKS%20TRANSFER%2C%20I%20would%20like%20to%20book%20a%20transfer."
+   target="_blank"
+   rel="noopener"
+   aria-label="Book a transfer on WhatsApp">
+  <span class="wa-icon">💬</span>
+  <span data-en="BOOK ON WHATSAPP" data-el="ΚΡΑΤΗΣΗ ΣΤΟ WHATSAPP">BOOK ON WHATSAPP</span>
+</a>
+
 <script src="script.js"></script></body></html>
